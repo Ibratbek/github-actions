@@ -4,7 +4,7 @@ require('dotenv').config();
 const app = express();
 
 app.get('/users', (req, res) => {
-  res.send('All users');
+  res.send('Ibrat');
 });
 
 // app.get('/documents', (req, res) => {
