@@ -7,10 +7,6 @@ app.get('/users', (req, res) => {
   res.send('All users');
 });
 
-app.get('/documents', (req, res) => {
-  res.send('All documents');
-});
-
 app.get('/profile', (req, res) => {
   res.send('Your profile');
 });
