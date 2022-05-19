@@ -15,6 +15,10 @@ app.get('/profile', (req, res) => {
   res.send('Your profile');
 });
 
+app.get('/newbranch', (req, res) => {
+  res.send('newbranch');
+});
+
 app.use('*', (req, res) => {
   res.send('Not found!');
 });
