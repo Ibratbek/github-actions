@@ -11,6 +11,10 @@ app.get('/documents', (req, res) => {
   res.send('All documents');
 });
 
+app.get('/profile', (req, res) => {
+  res.send('Your profile');
+});
+
 app.use('*', (req, res) => {
   res.send('Not found!');
 });
