@@ -1,0 +1,28 @@
+name: 'Nodejs App'
+
+on:
+  push:
+    branches: [master]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [14.x]
+
+    steps:
+      - name: Deploy node app
+        uses: appleboy/checkout@v2
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USERNAME }}
+          password: ${{ secrets.SSH_PASSWORD }}
+          script_stop: true
+          script: |
+            cd ${{ secrets.PROJECT_DIRECTORY }}
+            git pull
+            npm install
+            cat app.js
+            pm2 restart ecosystem.config.js

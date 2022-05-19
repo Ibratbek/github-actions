@@ -7,7 +7,7 @@ app.get('/users', (req, res) => {
   res.send('All users');
 });
 
-app.get('/docutents', (req, res) => {
+app.get('/documents', (req, res) => {
   res.send('All documents');
 });
 
